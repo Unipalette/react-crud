@@ -1,38 +1,203 @@
-.App {
+@font-face {
+  font-family: "Mongdol";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Mongdol.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input {
+  font-family: "Mongdol";
+  font-size: 22px;
+  outline: none;
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+textarea {
+  margin-top: 10px;
+  display: block;
+  padding: 0;
+  width: 134px;
+  font-family: "Mongdol";
+  font-size: 15px;
+  outline: none;
+  border: none;
+  text-align: center;
+  overflow-y: hidden;
+  resize: none;
+  line-height: 20px;
+  font-weight: 100;
+}
+.update-form input {
+  width: 134px;
+}
+.button {
+  outline: none;
+  background-color: transparent;
+  font-family: "Mongdol";
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  border: 1px solid #f4f4f4;
+  background-color: #fff;
+  color: #a3a3a3;
+  border-radius: 6px;
+  padding: 6px 10px 10px 10px;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: -0.32px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-title {
+  font-size: 18px;
+  text-align: center;
+  margin-top: -10px;
+  letter-spacing: -0.2px;
+  color: #6c6c6c;
+  font-weight: 100;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: -0.27px;
+  margin-top: 10px;
+}
+.main-content {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 42px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 23px;
+  padding: 40px 72px 45px 72px;
+  box-shadow: 5px 5px 15px #a7a7a71d;
+}
+.main-content .main-content-title {
+  font-size: 22px;
+  letter-spacing: -0.33px;
+  font-weight: 100;
+}
+.main-content .main-content-des {
+  width: 134px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6c6c6c;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.list-wrap {
+  margin-top: 30px;
+}
+.modify {
+  margin-top: 25px;
+}
+.modify li a {
+  position: relative;
+}
+.modify li.create a::after {
+  position: absolute;
+  content: "";
+  background-color: #39ff8d72;
+  width: 100%;
+  height: 3px;
+  bottom: 1.8px;
+  left: 0;
+  transform: rotate(356deg);
+}
+.modify .control-wrap {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.modify .control-wrap li.control {
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+.modify .control-wrap li.control:first-child {
+  margin-right: 15px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 6px 10px 10px 10px;
+}
+.update-pad {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 42px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 23px;
+  padding: 40px 72px 45px 72px;
+  box-shadow: 5px 5px 15px #a7a7a71d;
+}
+.update-btn {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #414141;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 6px 10px 10px 10px;
+  cursor: pointer;
+}
+.update-btn-wrap {
+  margin: 0;
+  width: 134px;
 }
 
-.App-link {
-  color: #61dafb;
+.create-pad {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 42px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 23px;
+  padding: 40px 72px 45px 72px;
+  box-shadow: 5px 5px 15px #a7a7a71d;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-btn {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #414141;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 6px 10px 10px 10px;
+  cursor: pointer;
+}
+.create-title {
+  width: 134px;
 }
